@@ -1,15 +1,16 @@
 {
-  "name": "@typeghost/nodex-mysql-migrate",
+  "name": "@typeghost/excavator-mysql-migrate",
   "version": "0.0.0",
   "description": "MySQL schema migration",
   "keywords": [],
-  "homepage": "https://github.com/typeghost/nodex#readme",
+  "homepage": "https://github.com/typeghost/excavator#readme",
   "bugs": {
-    "url": "https://github.com/typeghost/nodex/issues"
+    "url": "https://github.com/typeghost/excavator/issues"
   },
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
   "license": "MIT",
   "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.js",
   "directories": {
     "test": "dist/__tests__"
   },
@@ -21,14 +22,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/typeghost/nodex.git"
+    "url": "git+https://github.com/typeghost/excavator.git"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "build": "tsc -b",
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "mysql2": "^2.2.5"
+    "crc": "^3.8.0",
+    "mysql2": "^2.2.5",
+    "testcontainers": "^7.18.2"
+  },
+  "devDependencies": {
+    "@types/crc": "^3.4.0"
   }
 }
